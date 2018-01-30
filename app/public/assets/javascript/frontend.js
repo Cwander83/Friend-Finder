@@ -72,7 +72,8 @@ $("#submit").on("click", function (event) {
 
             // Show the modal with the best match
             $("#results-modal").modal("toggle");
-
+            console.log('userdata: '+userData);
+            console.log('data.name: '+data.name);
         });
     } else {
         alert("Please fill out all fields before submitting!");
