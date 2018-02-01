@@ -36,8 +36,6 @@ module.exports = function (app) {
 
         // Convert each user's results into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
         let user = req.body;
-
-
         let userScore = user["scores[]"];
         // // Converts the survey scores from str to int
         for (let i = 0; i < userScore.length; i++) {
@@ -46,19 +44,13 @@ module.exports = function (app) {
         }
 
         friendsData.push(user);
-       
-        // user.ForEach(element => {
-        //     let scoreInt = 
-
-        // });
-
 
         // With that done, compare the difference between current user's scores against those from other users, question by question. Add up the differences to calculate the totalDifference.
         // Example:
         // User 1: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
         // User 2: [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]
         // Total Difference: 2 + 1 + 2 = 5
-        // Remember to use the absolute value of the differences. Put another way: no negative solutions! Your app should calculate both 5-3 and 3-5 as 2, and so on.
+
         let match = 0;
         let maxDifference = 40;
 
@@ -67,6 +59,7 @@ module.exports = function (app) {
             let totalDif = 0;
 
             for (let j = 0; j < friendsData[i].scores.length; j++) {
+                // Remember to use the **absolute value** of the differences. Put another way: no negative solutions! Your app should calculate both 5-3 and 3-5 as 2, and so on.
                 totalDif += Math.abs(friendsData[i].scores[j] - userScore[j]);
             }
 
@@ -80,8 +73,7 @@ module.exports = function (app) {
             }
         }
 
-
-        res.json(friendsData[match]);
+        res.send(friendsData[match]);
     });
 
 };
