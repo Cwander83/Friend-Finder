@@ -16,7 +16,7 @@ const path = require("path");
 const app = express();
 
 // Sets an initial port. We"ll use this later in our listener
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 
 // Sets up the Express app to handle data parsing
