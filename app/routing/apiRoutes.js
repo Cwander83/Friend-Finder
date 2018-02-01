@@ -36,11 +36,11 @@ module.exports = function (app) {
 
         // Convert each user's results into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
         let user = req.body;
-        let userScore = user["scores[]"];
+        //let userScore = user["scores[]"];
         // // Converts the survey scores from str to int
-        for (let i = 0; i < userScore.length; i++) {
-            let scoreInt = parseInt(userScore[i]);
-            userScore[i] = scoreInt;
+        for (let i = 0; i < user.scores.length; i++) {
+            let scoreInt = parseInt(user.scores[i]);
+            user.scores[i] = scoreInt;
         }
 
         friendsData.push(user);
@@ -60,7 +60,7 @@ module.exports = function (app) {
 
             for (let j = 0; j < friendsData[i].scores.length; j++) {
                 // Remember to use the **absolute value** of the differences. Put another way: no negative solutions! Your app should calculate both 5-3 and 3-5 as 2, and so on.
-                totalDif += Math.abs(friendsData[i].scores[j] - userScore[j]);
+                totalDif += Math.abs(friendsData[i].scores[j] - user.scores[j]);
             }
 
             // The closest match will be the user with the least amount of difference.
