@@ -12,7 +12,7 @@ logic.*/
 // We are linking our routes to a series of "data" sources.
 // These data sources hold arrays of information on table-data, waitinglist, etc.
 // ===============================================================================
-const friendsData = require("../data/friends.js");
+var friendsData = require("../data/friends.js");
 
 // ===============================================================================
 // ROUTING
