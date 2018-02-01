@@ -36,6 +36,7 @@ module.exports = function (app) {
 
         // Convert each user's results into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
         let user = req.body;
+        //let userScore = user["scores[]"];
         // // Converts the survey scores from str to int
         for (let i = 0; i < user.scores.length; i++) {
             let scoreInt = parseInt(user.scores[i]);

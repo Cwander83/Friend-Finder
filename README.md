@@ -7,3 +7,8 @@
 ## Demo
 	
 *Friend Finder* is deployed to Heroku. Please check it out [here](https://whispering-ridge-63792.herokuapp.com/).
+
+## Video
+
+*Friend Finder* running from the Heroku 'open app' button.
+![Video](assets/images/workingVideo.mp4)
