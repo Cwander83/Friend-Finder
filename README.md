@@ -11,4 +11,4 @@
 ## Video
 
 *Friend Finder* running from the Heroku 'open app' button.
-![Video](assets/images/workingVideo.mp4)
+![Video](https://github.com/Cwander83/Friend-Finder/blob/master/app/public/assets/images/workingVideo.mp4)
