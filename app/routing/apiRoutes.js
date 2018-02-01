@@ -73,7 +73,7 @@ module.exports = function (app) {
             }
         }
 
-        res.send(friendsData[match]);
+        res.json(friendsData[match]);
     });
 
 };
